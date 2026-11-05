@@ -1,0 +1,11 @@
+pessoas = list()
+dados = list()
+for i in range (3):
+    dados.append(str(input('Digite seu nome')))
+    dados.append(int(input('Digite seu nome')))
+    pessoas.append(dados[:])
+    dados.clear()
+print(f'Foram cadastradas {len(pessoas)} pessoas')
+maior_peso = max(pessoas, key=lambda p: p[1])
+print(f'A pessoa mais pesada é {maior_peso[0]} com {maior_peso[1]}KG')
+print(f'Lista dos menos pesados: {[p for p in pessoas if p != max(pessoas, key=lambda p: p[1])]}')
